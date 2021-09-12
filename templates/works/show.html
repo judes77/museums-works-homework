@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <div>
+        <p>{{ work.title }}</p>
+        <p>{{ work.artist }}</p>
+        <p>{{ work.year }}</p>
+        <p><a href="/works/{{ work.id }}/edit">Edit</a></p>
+
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="content">
+    {% for museum in museums %}
+    <div class="museum-details">
+      <a href="/museums/{{museum.id}}">{{museum.name}}</a>
+      <address>
+        {{museum.address}}
+      </address>
+      <div class="buttons">
+    <form class="delete-form" action="/museums/{{museum.id}}/delete" method="POST">
+      <button class="trash-button"><i class="fa fa-trash-o fa-2x" style="color:red"></i></button>
+      </form>
+      <div>
+  </div>
+{% endfor %}
+</section>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2 class="page-title">Edit Information</h2>  
+
+<form action="/works/{{work.id}}" method='post'>
+    <div>
+        <label for="title">Name</label>
+        <input type="text" name="title" id="title" value="{{work.name}}" required autofocus>
+    </div>
+
+    <div>
+        <label for="artist">Address</label>
+        <input type="text" name="artist" id="artist" value="{{work.address}}" required>
+    </div>
+    <div>
+        <label for="year">Year</label>
+        <input type="text" name="year" id="year" value="{{work.address}}" required>
+    </div>
+    <button type="submit">Update</button>
+</form>
+
+{% endblock content %}
